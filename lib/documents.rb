@@ -43,3 +43,9 @@ ActionController::Routing::Routes.add_configuration_file(
 	File.expand_path(
 		File.join(
 			File.dirname(__FILE__), '../config/routes.rb')))
+
+ActionController::Base.view_paths <<
+	File.expand_path(
+		File.join(
+			File.dirname(__FILE__), '../app/views'))
+
