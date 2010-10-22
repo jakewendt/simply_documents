@@ -1,0 +1,57 @@
+= Documents
+
+
+== ToDo
+
+
+== Required Gem Sources
+
+ gem sources -a http://rubygems.org
+ gem sources -a http://gems.github.com
+
+== Required Gems
+
+* {assert_this_and_that}[http://github.com/jakewendt/assert_this_and_that]
+* {ruby_extension}[http://github.com/jakewendt/ruby_extension] - modifications, updates and patches for ruby.
+* rails ~> 2
+* i18n =0.3.7
+* chronic
+* ruby-hmac
+* aws-s3
+* ssl_requirement
+* ryanb-acts-as-list
+* RedCloth
+* paperclip
+* thoughtbot-factory_girl
+* jakewendt-rails_helpers
+* jakewendt-ruby_extension
+* jakewendt-assert_this_and_that
+* jakewendt-calnet_authenticated
+
+== Installation (as a plugin/engine)
+
+ cp config/s3.yml.example config/s3.yml
+ # Add your own s3 access keys.  Leave 'test' as it is.
+
+== Testing (as an app)
+
+ rake db:migrate
+ rake db:fixtures:load
+ rake test
+ script/server
+
+== Gemified with Jeweler
+
+ vi Rakefile
+ rake version:write
+
+ rake version:bump:patch
+ rake version:bump:minor
+ rake version:bump:major
+
+ rake gemspec
+
+ rake install
+ rake release
+
+Copyright (c) 2010 [Jake Wendt], released under the MIT license

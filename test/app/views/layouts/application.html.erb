@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<title><%= @page_title || "Documents Demo App" -%></title>
+<%= javascript_include_tag 'jquery','jquery-ui','jrails','ucb_ccls_engine','documents' %>
+<%#= stylesheet_link_tag :defaults %>
+<%= yield :head %>
+</head>
+<body>
+<div id='container'>
+<div id='content'>
+<%= flasher() %>
+<%= yield %>
+<%= link_to "Documents", documents_path %>
+<%= aws_image_tag('three_bears.jpg',:style => "width:100%;") %>
+</div><!-- content -->
+</div><!-- container -->
+</body>
+</html>
