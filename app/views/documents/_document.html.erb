@@ -6,8 +6,10 @@
 <%= document.document_file_name %>
 </td>
 <td class='manage'>
-<%= link_to 'Edit', edit_document_path(document) %>&nbsp;
-<%= link_to 'Destroy', document, 
-	:confirm => 'Are you sure?', :method => :delete %>
+<%= button_link_to 'Edit', edit_document_path(document) %>&nbsp;
+<% destroy_link_to 'Destroy', document do %>
+<%= hidden_field_tag 'confirm', "Destroy document '#{document}'?", 
+	:id => nil %>
+<% end %>
 </td>
 <% end %><!-- class='document row' -->

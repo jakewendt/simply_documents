@@ -3,10 +3,8 @@
 <% form_for(@document,:html => { :multipart => true }) do |f| %>
 	<%= f.error_messages %>
 
-	<div>
-		<%= f.label :title %><br />
-		<%= f.text_field :title %>
-	</div>
+	<%= f.wrapped_text_field :title %>
+
 	<div>
 	<div class='document'>
 		<%= f.label :document -%>
@@ -16,11 +14,6 @@
 		<%= f.file_field :document %>
 	</div>
 	</div>
-	<div class='abstract'>
-		<%= f.label :abstract %><br />
-		<%= f.text_area :abstract %>
-	</div>
-	<p>
-		<%= f.submit( (@document.new_record?)? "Create" : "Update" )%>
-	</p>
+	<%= f.wrapped_text_area :abstract %>
+	<p><%= f.submit( (@document.new_record?)? "Create" : "Update" )%></p>
 <% end %>
