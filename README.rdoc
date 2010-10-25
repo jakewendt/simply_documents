@@ -1,6 +1,5 @@
 = Documents
 
-
 == ToDo
 
 
@@ -31,10 +30,20 @@
 * jakewendt-calnet_authenticated
 
 
-== Installation (as a plugin/engine)
+== Installation and Usage
 
  cp config/s3.yml.example config/s3.yml
  # Add your own s3 access keys.  Leave 'test' as it is.
+
+ 
+ config.gem 'jakewendt-documents',
+    :lib => 'documents',
+    :source => 'http://rubygems.org'
+
+
+ class User (or whatever)
+    document_owner
+ end
 
 
 == Testing (as an app)

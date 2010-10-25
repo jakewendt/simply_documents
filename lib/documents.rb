@@ -1,3 +1,5 @@
+require 'active_record'
+require 'active_support'
 require 'ruby_extension'
 require 'rails_helpers'
 require 'authorized'
@@ -7,6 +9,7 @@ require 'acts_as_list'
 module Documents
 #	predefine namespace
 end
+require 'documents/owner'
 
 #	This doesn't seem necessary
 %w{models controllers}.each do |dir|
