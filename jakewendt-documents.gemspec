@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-documents}
-  s.version = "0.1.2"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
@@ -32,11 +32,13 @@ Gem::Specification.new do |s|
      "generators/documents/templates/javascripts/documents.js",
      "generators/documents/templates/migrations/add_attachments_document_to_document.rb",
      "generators/documents/templates/migrations/create_documents.rb",
+     "generators/documents/templates/migrations/polymorphicize_document_owner.rb",
      "generators/documents/templates/stylesheets/documents.css",
      "generators/documents/templates/unit/document_test.rb",
      "lib/documents.rb",
      "lib/documents/factories.rb",
      "lib/documents/file_utils_extension.rb",
+     "lib/documents/owner.rb",
      "lib/documents/pending.rb",
      "lib/documents/tasks.rb",
      "lib/tasks/application.rake",
