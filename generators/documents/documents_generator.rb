@@ -7,7 +7,9 @@ class DocumentsGenerator < Rails::Generator::Base
 		record do |m|
 
 			%w( create_documents
-				add_attachments_document_to_document ).each do |migration|
+				add_attachments_document_to_document 
+				polymorphicize_document_owner
+				).each do |migration|
 				m.migration_template "migrations/#{migration}.rb",
 					'db/migrate', :migration_file_name => migration
 			end

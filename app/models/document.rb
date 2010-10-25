@@ -3,7 +3,8 @@ require 'hmac-sha1'
 #	http://amazon.rubyforge.org/
 #
 class Document < ActiveRecord::Base
-	belongs_to :owner, :class_name => 'User'
+#	belongs_to :owner, :class_name => 'User'
+	belongs_to :owner, :polymorphic => true
 #	has_and_belongs_to_many :users
 #	has_and_belongs_to_many :groups
 

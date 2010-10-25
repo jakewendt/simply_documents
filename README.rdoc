@@ -4,10 +4,12 @@
 == ToDo
 
 
+
 == Required Gem Sources
 
  gem sources -a http://rubygems.org
  gem sources -a http://gems.github.com
+
 
 == Required Gems
 
@@ -28,10 +30,12 @@
 * jakewendt-assert_this_and_that
 * jakewendt-calnet_authenticated
 
+
 == Installation (as a plugin/engine)
 
  cp config/s3.yml.example config/s3.yml
  # Add your own s3 access keys.  Leave 'test' as it is.
+
 
 == Testing (as an app)
 
@@ -39,6 +43,7 @@
  rake db:fixtures:load
  rake test
  script/server
+
 
 == Gemified with Jeweler
 
@@ -53,5 +58,6 @@
 
  rake install
  rake release
+
 
 Copyright (c) 2010 [Jake Wendt], released under the MIT license
