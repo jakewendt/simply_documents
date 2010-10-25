@@ -1,4 +1,4 @@
-class DocumentsGenerator < Rails::Generator::Base
+class SimplyDocumentsGenerator < Rails::Generator::Base
 
 	def manifest
 		#	See Rails::Generator::Commands::Create

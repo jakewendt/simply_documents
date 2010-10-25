@@ -1,4 +1,4 @@
-= Documents
+= SimplyDocuments
 
 == ToDo
 
@@ -36,8 +36,8 @@
  # Add your own s3 access keys.  Leave 'test' as it is.
 
  
- config.gem 'jakewendt-documents',
-    :lib => 'documents',
+ config.gem 'jakewendt-simply_documents',
+    :lib => 'simply_documents',
     :source => 'http://rubygems.org'
 
 

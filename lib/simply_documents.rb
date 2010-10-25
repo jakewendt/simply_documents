@@ -2,14 +2,14 @@ require 'active_record'
 require 'active_support'
 require 'ruby_extension'
 require 'rails_helpers'
-require 'authorized'
 require 'gravatar'
 require 'calnet_authenticated'
+require 'simply_authorized'
 require 'acts_as_list'
-module Documents
+module SimplyDocuments
 #	predefine namespace
 end
-require 'documents/owner'
+require 'simply_documents/owner'
 
 #	This doesn't seem necessary
 %w{models controllers}.each do |dir|
@@ -27,12 +27,12 @@ if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
 	require 'active_support/test_case'
 	require 'factory_girl'
 	require 'assert_this_and_that'
-	require 'documents/factories'
-	require 'documents/pending'
+	require 'simply_documents/factories'
+	require 'simply_documents/pending'
 end
 
 if RUBY_PLATFORM =~ /java/i
-	require 'documents/file_utils_extension'
+	require 'simply_documents/file_utils_extension'
 end
 
 require 'paperclip'

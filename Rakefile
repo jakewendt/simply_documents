@@ -7,7 +7,7 @@ require 'rake/rdoctask'
 desc 'Generate documentation for the app.'
 Rake::RDocTask.new(:rdoc) do |rdoc|
 	rdoc.rdoc_dir = 'rdoc'
-	rdoc.title		= 'Documents'
+	rdoc.title		= 'SimplyDocuments'
 	rdoc.options << '--line-numbers' << '--inline-source'
 	rdoc.rdoc_files.include('README')
 	rdoc.rdoc_files.include('lib/**/*.rb')
@@ -18,11 +18,11 @@ require 'tasks/rails'
 begin
 	require 'jeweler'
 	Jeweler::Tasks.new do |gem|
-		gem.name = "jakewendt-documents"
+		gem.name = "jakewendt-simply_documents"
 		gem.summary = %Q{one-line summary of your gem}
 		gem.description = %Q{longer description of your gem}
 		gem.email = "github@jake.otherinbox.com"
-		gem.homepage = "http://github.com/jakewendt/documents"
+		gem.homepage = "http://github.com/jakewendt/simply_documents"
 		gem.authors = ["George 'Jake' Wendt"]
 		# gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
 
@@ -56,14 +56,14 @@ begin
 #
 		gem.add_dependency('i18n', '=0.3.7')
 		gem.add_dependency('rails', '~> 2')
-		gem.add_dependency('activerecord', '~> 2')
-		gem.add_dependency('activeresource', '~> 2')
-		gem.add_dependency('activesupport', '~> 2')
-		gem.add_dependency('actionmailer', '~> 2')
-		gem.add_dependency('actionpack', '~> 2')
+#		gem.add_dependency('activerecord', '~> 2')
+#		gem.add_dependency('activeresource', '~> 2')
+#		gem.add_dependency('activesupport', '~> 2')
+#		gem.add_dependency('actionmailer', '~> 2')
+#		gem.add_dependency('actionpack', '~> 2')
 		gem.add_dependency('jakewendt-rails_helpers')
 		gem.add_dependency('jakewendt-ruby_extension')
-		gem.add_dependency('jakewendt-authorized')
+		gem.add_dependency('jakewendt-simply_authorized')
 		gem.add_dependency('chronic')
 		gem.add_dependency('ruby-hmac')
 		gem.add_dependency('aws-s3')

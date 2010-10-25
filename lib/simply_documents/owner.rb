@@ -1,4 +1,4 @@
-module Documents::Owner
+module SimplyDocuments::Owner
 	def self.included(base)
 		base.extend(PrepMethod)
 	end
@@ -9,4 +9,4 @@ module Documents::Owner
 		end
 	end
 end
-ActiveRecord::Base.send(:include,Documents::Owner)
+ActiveRecord::Base.send(:include,SimplyDocuments::Owner)

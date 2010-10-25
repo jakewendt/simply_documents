@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../../test_helper'
 
-class Documents::DocumentsControllerTest < ActionController::TestCase
+class SimplyDocuments::DocumentsControllerTest < ActionController::TestCase
 	tests DocumentsController
 
 	ASSERT_ACCESS_OPTIONS = {
