@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-documents}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
-  s.date = %q{2010-10-22}
+  s.date = %q{2010-10-25}
   s.description = %q{longer description of your gem}
   s.email = %q{github@jake.otherinbox.com}
   s.extra_rdoc_files = [
@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
      "generators/documents/USAGE",
      "generators/documents/documents_generator.rb",
      "generators/documents/templates/functional/documents_controller_test.rb",
+     "generators/documents/templates/javascripts/documents.js",
      "generators/documents/templates/migrations/add_attachments_document_to_document.rb",
      "generators/documents/templates/migrations/create_documents.rb",
      "generators/documents/templates/stylesheets/documents.css",
