@@ -4,8 +4,8 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{jakewendt-documents}
-  s.version = "0.2.0"
+  s.name = %q{jakewendt-simply_documents}
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
@@ -26,28 +26,28 @@ Gem::Specification.new do |s|
      "app/views/documents/preview.html.erb",
      "config/document.yml",
      "config/routes.rb",
-     "generators/documents/USAGE",
-     "generators/documents/documents_generator.rb",
-     "generators/documents/templates/functional/documents_controller_test.rb",
-     "generators/documents/templates/javascripts/documents.js",
-     "generators/documents/templates/migrations/add_attachments_document_to_document.rb",
-     "generators/documents/templates/migrations/create_documents.rb",
-     "generators/documents/templates/migrations/polymorphicize_document_owner.rb",
-     "generators/documents/templates/stylesheets/documents.css",
-     "generators/documents/templates/unit/document_test.rb",
-     "lib/documents.rb",
-     "lib/documents/factories.rb",
-     "lib/documents/file_utils_extension.rb",
-     "lib/documents/owner.rb",
-     "lib/documents/pending.rb",
-     "lib/documents/tasks.rb",
+     "generators/simply_documents/USAGE",
+     "generators/simply_documents/simply_documents_generator.rb",
+     "generators/simply_documents/templates/functional/documents_controller_test.rb",
+     "generators/simply_documents/templates/javascripts/documents.js",
+     "generators/simply_documents/templates/migrations/add_attachments_document_to_document.rb",
+     "generators/simply_documents/templates/migrations/create_documents.rb",
+     "generators/simply_documents/templates/migrations/polymorphicize_document_owner.rb",
+     "generators/simply_documents/templates/stylesheets/documents.css",
+     "generators/simply_documents/templates/unit/document_test.rb",
+     "lib/simply_documents.rb",
+     "lib/simply_documents/factories.rb",
+     "lib/simply_documents/file_utils_extension.rb",
+     "lib/simply_documents/owner.rb",
+     "lib/simply_documents/pending.rb",
+     "lib/simply_documents/tasks.rb",
      "lib/tasks/application.rake",
      "lib/tasks/database.rake",
      "lib/tasks/documentation.rake",
      "lib/tasks/rcov.rake",
      "lib/tasks/ucb_ccls_engine_tasks.rake"
   ]
-  s.homepage = %q{http://github.com/jakewendt/documents}
+  s.homepage = %q{http://github.com/jakewendt/simply_documents}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
@@ -60,14 +60,9 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<i18n>, ["= 0.3.7"])
       s.add_runtime_dependency(%q<rails>, ["~> 2"])
-      s.add_runtime_dependency(%q<activerecord>, ["~> 2"])
-      s.add_runtime_dependency(%q<activeresource>, ["~> 2"])
-      s.add_runtime_dependency(%q<activesupport>, ["~> 2"])
-      s.add_runtime_dependency(%q<actionmailer>, ["~> 2"])
-      s.add_runtime_dependency(%q<actionpack>, ["~> 2"])
       s.add_runtime_dependency(%q<jakewendt-rails_helpers>, [">= 0"])
       s.add_runtime_dependency(%q<jakewendt-ruby_extension>, [">= 0"])
-      s.add_runtime_dependency(%q<jakewendt-authorized>, [">= 0"])
+      s.add_runtime_dependency(%q<jakewendt-simply_authorized>, [">= 0"])
       s.add_runtime_dependency(%q<chronic>, [">= 0"])
       s.add_runtime_dependency(%q<ruby-hmac>, [">= 0"])
       s.add_runtime_dependency(%q<aws-s3>, [">= 0"])
@@ -80,14 +75,9 @@ Gem::Specification.new do |s|
     else
       s.add_dependency(%q<i18n>, ["= 0.3.7"])
       s.add_dependency(%q<rails>, ["~> 2"])
-      s.add_dependency(%q<activerecord>, ["~> 2"])
-      s.add_dependency(%q<activeresource>, ["~> 2"])
-      s.add_dependency(%q<activesupport>, ["~> 2"])
-      s.add_dependency(%q<actionmailer>, ["~> 2"])
-      s.add_dependency(%q<actionpack>, ["~> 2"])
       s.add_dependency(%q<jakewendt-rails_helpers>, [">= 0"])
       s.add_dependency(%q<jakewendt-ruby_extension>, [">= 0"])
-      s.add_dependency(%q<jakewendt-authorized>, [">= 0"])
+      s.add_dependency(%q<jakewendt-simply_authorized>, [">= 0"])
       s.add_dependency(%q<chronic>, [">= 0"])
       s.add_dependency(%q<ruby-hmac>, [">= 0"])
       s.add_dependency(%q<aws-s3>, [">= 0"])
@@ -101,14 +91,9 @@ Gem::Specification.new do |s|
   else
     s.add_dependency(%q<i18n>, ["= 0.3.7"])
     s.add_dependency(%q<rails>, ["~> 2"])
-    s.add_dependency(%q<activerecord>, ["~> 2"])
-    s.add_dependency(%q<activeresource>, ["~> 2"])
-    s.add_dependency(%q<activesupport>, ["~> 2"])
-    s.add_dependency(%q<actionmailer>, ["~> 2"])
-    s.add_dependency(%q<actionpack>, ["~> 2"])
     s.add_dependency(%q<jakewendt-rails_helpers>, [">= 0"])
     s.add_dependency(%q<jakewendt-ruby_extension>, [">= 0"])
-    s.add_dependency(%q<jakewendt-authorized>, [">= 0"])
+    s.add_dependency(%q<jakewendt-simply_authorized>, [">= 0"])
     s.add_dependency(%q<chronic>, [">= 0"])
     s.add_dependency(%q<ruby-hmac>, [">= 0"])
     s.add_dependency(%q<aws-s3>, [">= 0"])
