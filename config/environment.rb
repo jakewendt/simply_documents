@@ -21,6 +21,12 @@ Rails::Initializer.run do |config|
 	#	This must be called early, or someone else will load a newer version.
 	config.gem "i18n", :version => '=0.3.7'
 
+	config.gem 'jakewendt-calnet_authenticated',
+		:lib => 'calnet_authenticated'
+
+	config.gem 'jakewendt-authorized',
+		:lib => 'authorized'
+
 	config.plugin_paths = [
 		File.expand_path(File.join(File.dirname(__FILE__),'../..')),
 		File.expand_path(File.join(File.dirname(__FILE__),'../../..','peter'))

@@ -7,7 +7,7 @@
 </td>
 <td class='manage'>
 <%= button_link_to 'Edit', edit_document_path(document) %>&nbsp;
-<% destroy_link_to 'Destroy', document do %>
+<% destroy_link_to 'Destroy', document_path(document) do %>
 <%= hidden_field_tag 'confirm', "Destroy document '#{document}'?", 
 	:id => nil %>
 <% end %>

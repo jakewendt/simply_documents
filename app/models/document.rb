@@ -23,6 +23,10 @@ class Document < ActiveRecord::Base
 		self.document_file_name = nil if document_file_name.blank?
 	end
 
+	def to_s
+		title
+	end
+
 #		#	document.document.url will include the full url
 #		#	document.document.path will not include the bucket
 #		def url_path
