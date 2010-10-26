@@ -1,4 +1,14 @@
-<h1>Editing Document</h1>
-<%= render 'form' %>
-<%= link_to 'Show', @document %> |
-<%= link_to 'Back', documents_path %>
+<h2>Editing Document</h2>
+
+<% form_for(@document,
+		:html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+  <%= render 'form',:f => f %>
+<p>
+<%= f.submit( "Update this Document" )%>&nbsp;
+<%= button_link_to 'Preview this Document', 
+	preview_document_path(@document) %>&nbsp;
+<%= button_link_to 'Download this Document', @document %>&nbsp;
+<%= button_link_to 'Back to Documents', documents_path %>
+</p>
+<% end %>

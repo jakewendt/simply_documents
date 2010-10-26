@@ -1,0 +1,11 @@
+#menu {
+	float:left;
+	width: 200px;
+}
+#menu a {
+	display:block;
+	padding: 5px;
+}
+#content {
+	margin-left: 200px;
+}

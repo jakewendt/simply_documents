@@ -1,19 +1,13 @@
 <%# stylesheets('document') %>
 
-<% form_for(@document,:html => { :multipart => true }) do |f| %>
-	<%= f.error_messages %>
+<%= f.wrapped_text_field :title %>
 
-	<%= f.wrapped_text_field :title %>
-
-	<div>
-	<div class='document'>
-		<%= f.label :document -%>
-		<% unless @document.new_record? -%>
-			(<%= @document.document.url -%>)
-		<% end -%><br />
-		<%= f.file_field :document %>
-	</div>
-	</div>
-	<%= f.wrapped_text_area :abstract %>
-	<p><%= f.submit( (@document.new_record?)? "Create" : "Update" )%></p>
-<% end %>
+<div>
+<div class='document'>
+	<%= f.wrapped_file_field :document %>
+	<% unless @document.new_record? -%>
+		(<%= @document.document.url -%>)
+	<% end -%><br />
+</div>
+</div>
+<%= f.wrapped_text_area :abstract %>

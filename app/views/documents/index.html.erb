@@ -4,6 +4,8 @@
 <table id='documents'><tbody>
 <%= render :partial => 'document', :collection => @documents %>
 </tbody></table><!-- id='documents' -->
+<% else %>
+Sorry, but no documents yet.
 <% end %>
 
 <p>

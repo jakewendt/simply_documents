@@ -10,6 +10,8 @@
   <%=h @document.abstract %>
 </p>
 
-<%= link_to 'Download', document_path(@document) %> |
-<%= link_to 'Edit', edit_document_path(@document) %> |
-<%= link_to 'Back', documents_path %>
+<%= button_link_to 'Download this Document', 
+	document_path(@document) %>&nbsp;
+<%= button_link_to 'Edit this Document', 
+	edit_document_path(@document) %>&nbsp;
+<%= button_link_to 'Back to Documents', documents_path %>
