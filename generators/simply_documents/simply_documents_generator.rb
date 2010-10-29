@@ -6,6 +6,20 @@ class SimplyDocumentsGenerator < Rails::Generator::Base
 		#	for code methods for record (Manifest)
 		record do |m|
 
+			File.open('Rakefile','a'){|f| 
+				f.puts <<-EOF
+#	From `script/generate simply_documents` ...
+require 'simply_documents/test_tasks'
+				EOF
+			}
+
+			File.open('.autotest','a'){|f| 
+				f.puts <<-EOF
+#	From `script/generate simply_documents` ...
+require 'simply_documents/autotest'
+				EOF
+			}
+
 			%w( create_documents
 				add_attachments_document_to_document 
 				polymorphicize_document_owner
@@ -24,16 +38,16 @@ class SimplyDocumentsGenerator < Rails::Generator::Base
 				f = file.split('/').slice(-2,2).join('/')
 				m.file(f, "public/stylesheets/#{File.basename(file)}")
 			}
-			m.directory('test/functional/documents')
-			Dir["#{File.dirname(__FILE__)}/templates/functional/*rb"].each{|file| 
-				f = file.split('/').slice(-2,2).join('/')
-				m.file(f, "test/functional/documents/#{File.basename(file)}")
-			}
-			m.directory('test/unit/documents')
-			Dir["#{File.dirname(__FILE__)}/templates/unit/*rb"].each{|file| 
-				f = file.split('/').slice(-2,2).join('/')
-				m.file(f, "test/unit/documents/#{File.basename(file)}")
-			}
+#			m.directory('test/functional/documents')
+#			Dir["#{File.dirname(__FILE__)}/templates/functional/*rb"].each{|file| 
+#				f = file.split('/').slice(-2,2).join('/')
+#				m.file(f, "test/functional/documents/#{File.basename(file)}")
+#			}
+#			m.directory('test/unit/documents')
+#			Dir["#{File.dirname(__FILE__)}/templates/unit/*rb"].each{|file| 
+#				f = file.split('/').slice(-2,2).join('/')
+#				m.file(f, "test/unit/documents/#{File.basename(file)}")
+#			}
 		end
 	end
 
