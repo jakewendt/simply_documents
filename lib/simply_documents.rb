@@ -25,7 +25,7 @@ HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
 if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
 	require 'active_support/test_case'
 	require 'factory_girl'
-	require 'assert_this_and_that'
+	require 'simply_testable'
 	require 'simply_documents/factories'
 	require 'simply_documents/pending'
 end
