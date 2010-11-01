@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-simply_documents}
-  s.version = "1.1.0"
+  s.version = "1.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
@@ -60,8 +60,8 @@ Gem::Specification.new do |s|
      "test/app/models/user.rb",
      "test/config/routes.rb",
      "test/functional/documents/documents_controller_test.rb",
-     "test/test_helper.rb",
-     "test/unit/documents/document_test.rb"
+     "test/unit/documents/document_test.rb",
+     "test/assets/edit_save_wireframe.pdf"
   ]
 
   if s.respond_to? :specification_version then
