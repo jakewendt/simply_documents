@@ -39,7 +39,9 @@ begin
 #		are included as 'files' or 'test_files', but
 #		they need to be included if I'm gonna use'em.
 #
-		gem.test_files = FileList['test/**/*.rb']
+		gem.test_files  = FileList['test/**/*.rb']
+		gem.test_files += FileList['test/assets/*']
+		gem.test_files -= FileList['test/test_helper.rb']
 
 #
 #	It would be really nice if there was a way to
