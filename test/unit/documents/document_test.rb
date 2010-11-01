@@ -5,6 +5,9 @@ class SimplyDocuments::DocumentTest < ActiveSupport::TestCase
 
 	assert_should_require(:title,
 		:model => 'Document')
+	assert_should_require_attribute_length(:title,
+		:minimum => 4,
+		:model => 'Document')
 	assert_should_belong_to(:owner,:class_name => 'User',
 		:model => 'Document')
 
