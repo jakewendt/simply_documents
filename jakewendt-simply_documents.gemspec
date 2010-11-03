@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-simply_documents}
-  s.version = "1.1.1"
+  s.version = "1.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
-  s.date = %q{2010-11-01}
+  s.date = %q{2010-11-03}
   s.description = %q{longer description of your gem}
   s.email = %q{github@jake.otherinbox.com}
   s.extra_rdoc_files = [
@@ -40,7 +40,6 @@ Gem::Specification.new do |s|
      "lib/simply_documents/factories.rb",
      "lib/simply_documents/file_utils_extension.rb",
      "lib/simply_documents/owner.rb",
-     "lib/simply_documents/pending.rb",
      "lib/simply_documents/tasks.rb",
      "lib/simply_documents/test_tasks.rb",
      "lib/tasks/application.rake",

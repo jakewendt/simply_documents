@@ -27,7 +27,6 @@ if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
 	require 'factory_girl'
 	require 'simply_testable'
 	require 'simply_documents/factories'
-	require 'simply_documents/pending'
 end
 
 if RUBY_PLATFORM =~ /java/i
