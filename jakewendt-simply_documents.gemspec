@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-simply_documents}
-  s.version = "1.1.3"
+  s.version = "1.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
-  s.date = %q{2010-11-03}
+  s.date = %q{2010-11-05}
   s.description = %q{longer description of your gem}
   s.email = %q{github@jake.otherinbox.com}
   s.extra_rdoc_files = [
@@ -28,11 +28,13 @@ Gem::Specification.new do |s|
      "config/routes.rb",
      "generators/simply_documents/USAGE",
      "generators/simply_documents/simply_documents_generator.rb",
+     "generators/simply_documents/templates/autotest_simply_documents.rb",
      "generators/simply_documents/templates/functional/documents_controller_test.rb",
      "generators/simply_documents/templates/javascripts/documents.js",
      "generators/simply_documents/templates/migrations/add_attachments_document_to_document.rb",
      "generators/simply_documents/templates/migrations/create_documents.rb",
      "generators/simply_documents/templates/migrations/polymorphicize_document_owner.rb",
+     "generators/simply_documents/templates/simply_documents.rake",
      "generators/simply_documents/templates/stylesheets/documents.css",
      "generators/simply_documents/templates/unit/document_test.rb",
      "lib/simply_documents.rb",
