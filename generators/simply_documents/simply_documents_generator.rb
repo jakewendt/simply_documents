@@ -5,20 +5,24 @@ class SimplyDocumentsGenerator < Rails::Generator::Base
 		#	rails-2.3.10/lib/rails_generator/commands.rb
 		#	for code methods for record (Manifest)
 		record do |m|
+			m.directory('config/autotest')
+			m.file('autotest_simply_documents.rb', 'config/autotest/simply_documents.rb')
+			m.directory('lib/tasks')
+			m.file('simply_documents.rake', 'lib/tasks/simply_documents.rake')
 
-			File.open('Rakefile','a'){|f| 
-				f.puts <<-EOF
-#	From `script/generate simply_documents` ...
-require 'simply_documents/test_tasks'
-				EOF
-			}
-
-			File.open('.autotest','a'){|f| 
-				f.puts <<-EOF
-#	From `script/generate simply_documents` ...
-require 'simply_documents/autotest'
-				EOF
-			}
+#			File.open('Rakefile','a'){|f| 
+#				f.puts <<-EOF
+##	From `script/generate simply_documents` ...
+#require 'simply_documents/test_tasks'
+#				EOF
+#			}
+#
+#			File.open('.autotest','a'){|f| 
+#				f.puts <<-EOF
+##	From `script/generate simply_documents` ...
+#require 'simply_documents/autotest'
+#				EOF
+#			}
 
 			%w( create_documents
 				add_attachments_document_to_document 
