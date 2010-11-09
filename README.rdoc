@@ -32,17 +32,16 @@
 
  cp config/s3.yml.example config/s3.yml
  # Add your own s3 access keys.  Leave 'test' as it is.
-
  
  config.gem 'jakewendt-simply_documents',
-    :lib => 'simply_documents',
-    :source => 'http://rubygems.org'
-
+   :lib => 'simply_documents',
+   :source => 'http://rubygems.org'
 
  class User (or whatever)
     document_owner
  end
 
+ script/generate simply_documents
 
 == Testing (as an app)
 
