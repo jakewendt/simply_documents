@@ -13,14 +13,6 @@ RAILS_APP_NAME = 'ccls'
 
 Rails::Initializer.run do |config|
 
-	#	rails 3 requires i18n gem which will load
-	#	a version incompatible with 2.3.8.
-	#	It will generate several of ...
-	#	The {{key}} interpolation syntax in I18n 
-	#	messages is deprecated. Please use %{key} instead.
-	#	This must be called early, or someone else will load a newer version.
-#	config.gem "i18n", :version => '=0.3.7'
-
 	config.gem 'jakewendt-calnet_authenticated',
 		:lib => 'calnet_authenticated'
 
@@ -64,6 +56,3 @@ Rails::Initializer.run do |config|
 	end
 	
 end
-require 'user'
-user=User.find_create_and_update_by_uid('859908')
-user.deputize
