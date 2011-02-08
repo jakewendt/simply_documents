@@ -1,1 +1,1 @@
-require 'simply_documents'
+require 'jakewendt-simply_documents'

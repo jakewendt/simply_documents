@@ -34,7 +34,6 @@
  # Add your own s3 access keys.  Leave 'test' as it is.
  
  config.gem 'jakewendt-simply_documents',
-   :lib => 'simply_documents',
    :source => 'http://rubygems.org'
 
  class User (or whatever)
