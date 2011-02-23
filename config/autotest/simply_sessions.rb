@@ -1,2 +1,5 @@
 #	From `script/generate simply_sessions` ...
-require 'simply_sessions/autotest'
+unless Gem.source_index.find_name('jakewendt-simply_sessions').empty?
+	gem 'jakewendt-simply_sessions'
+	require 'simply_sessions/autotest'
+end

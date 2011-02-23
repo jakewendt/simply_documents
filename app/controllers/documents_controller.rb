@@ -1,5 +1,7 @@
 class DocumentsController < ApplicationController
 
+	before_filter :login_required
+
 	before_filter :may_maintain_pages_required
 	before_filter :document_required, :only => :show
 	before_filter :id_required, 
