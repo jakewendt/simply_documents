@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-simply_documents}
-  s.version = "1.2.5"
+  s.version = "1.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
-  s.date = %q{2011-02-18}
+  s.date = %q{2011-02-23}
   s.description = %q{longer description of your gem}
   s.email = %q{github@jake.otherinbox.com}
   s.extra_rdoc_files = [
@@ -46,12 +46,12 @@ Gem::Specification.new do |s|
     "lib/simply_documents/tasks.rb",
     "lib/simply_documents/test_tasks.rb",
     "lib/tasks/application.rake",
-    "lib/tasks/calnet_authenticated.rake",
     "lib/tasks/database.rake",
     "lib/tasks/documentation.rake",
     "lib/tasks/rcov.rake",
     "lib/tasks/simply_authorized.rake",
     "lib/tasks/simply_helpful.rake",
+    "lib/tasks/simply_sessions.rake",
     "lib/tasks/ucb_ccls_engine_tasks.rake"
   ]
   s.homepage = %q{http://github.com/jakewendt/simply_documents}
@@ -83,7 +83,6 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<ssl_requirement>, [">= 0"])
       s.add_runtime_dependency(%q<ryanb-acts-as-list>, [">= 0"])
       s.add_runtime_dependency(%q<paperclip>, [">= 0"])
-      s.add_runtime_dependency(%q<thoughtbot-factory_girl>, [">= 0"])
     else
       s.add_dependency(%q<rails>, ["~> 2"])
       s.add_dependency(%q<jakewendt-simply_helpful>, [">= 0"])
@@ -96,7 +95,6 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<ssl_requirement>, [">= 0"])
       s.add_dependency(%q<ryanb-acts-as-list>, [">= 0"])
       s.add_dependency(%q<paperclip>, [">= 0"])
-      s.add_dependency(%q<thoughtbot-factory_girl>, [">= 0"])
     end
   else
     s.add_dependency(%q<rails>, ["~> 2"])
@@ -110,7 +108,6 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<ssl_requirement>, [">= 0"])
     s.add_dependency(%q<ryanb-acts-as-list>, [">= 0"])
     s.add_dependency(%q<paperclip>, [">= 0"])
-    s.add_dependency(%q<thoughtbot-factory_girl>, [">= 0"])
   end
 end
 
