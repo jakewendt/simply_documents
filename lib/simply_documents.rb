@@ -18,6 +18,7 @@ require 'simply_documents/owner'
 	ActiveSupport::Dependencies.autoload_once_paths << path
 end
 
+require 'action_controller'	#	loads HTML
 HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
 	id class style
 ))

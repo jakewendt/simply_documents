@@ -10,10 +10,18 @@ namespace :test do
 	end
 	namespace :functionals do
 		Rake::TestTask.new(:simply_documents => "db:test:prepare") do |t|
-			t.pattern = File.expand_path(File.join(
-				File.dirname(__FILE__),'/../../test/functional/documents/*_test.rb'))
+#			t.pattern = File.expand_path(File.join(
+#				File.dirname(__FILE__),'/../../test/functional/documents/*_test.rb'))
 			t.libs << "test"
 			t.verbose = true
+			#	this enables user override
+			#	used to work without this, but now it doesn't???!?!?
+			t.test_files = [
+				File.expand_path(File.join(File.dirname(__FILE__),
+					'/../../test/functional/documents/*_test.rb')),
+				File.expand_path(File.join(Rails.root,
+					'/test/functional/documents/*_test.rb'))
+			]
 		end
 	end
 end
