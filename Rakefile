@@ -28,6 +28,7 @@ begin
 
 		gem.files  = FileList['config/routes.rb']
 		gem.files += FileList['config/document.yml']
+		gem.files += FileList['rails/init.rb']
 		gem.files += FileList['app/**/*.rb']
 		gem.files += FileList['app/**/*.erb']
 		gem.files += FileList['lib/**/*.rb']
