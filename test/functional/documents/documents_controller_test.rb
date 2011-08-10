@@ -97,7 +97,9 @@ class SimplyDocuments::DocumentsControllerTest < ActionController::TestCase
 		login_as send(cu)
 		get :show, :id => document.id
 		assert_response :redirect
-		assert_match %r{\Ahttp(s)?://s3.amazonaws.com/ccls/documents/\d+/bogus_file_name\.\?AWSAccessKeyId=\w+&Expires=\d+&Signature=.+\z}, @response.redirected_to
+#		assert_match %r{\Ahttp(s)?://s3.amazonaws.com/ccls/documents/\d+/bogus_file_name\.\?AWSAccessKeyId=\w+&Expires=\d+&Signature=.+\z}, @response.redirected_to
+#	newer versions of paperclip do not include the trailing "." after file name
+		assert_match %r{\Ahttp(s)?://s3.amazonaws.com/ccls/documents/\d+/bogus_file_name\?AWSAccessKeyId=\w+&Expires=\d+&Signature=.+\z}, @response.redirected_to
 	end
 
 
