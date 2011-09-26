@@ -31,9 +31,9 @@ if defined?(Rails) && Rails.env == 'test' && Rails.class_variable_defined?("@@co
 #		running a rake task
 end
 
-if RUBY_PLATFORM =~ /java/i
-	require 'simply_documents/file_utils_extension'
-end
+#if RUBY_PLATFORM =~ /java/i
+#	require 'simply_documents/file_utils_extension'
+#end
 
 require 'paperclip'
 if defined? ::Paperclip::Glue
